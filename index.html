@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (message) {
             addMessage(message, true);
 
-            fetch('http://localhost:5000/api/message', {
+            fetch('https://motivational-bot.onrender.com', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
