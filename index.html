@@ -134,7 +134,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: 'message=' + encodeURIComponent(message)
+                //body: 'message=' + encodeURIComponent(message)
+                body: JSON.stringify({ message: userInput })
             })
             .then(response => response.json())
             .then(data => {
