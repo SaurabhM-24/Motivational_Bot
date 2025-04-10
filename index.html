@@ -130,12 +130,12 @@ document.addEventListener('DOMContentLoaded', function() {
             addMessage(message, true);
 
             fetch('https://motivational-bot.onrender.com/api/message', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                //body: 'message=' + encodeURIComponent(message)
-                body: JSON.stringify({ message: userInput })
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message: message })  // ✅ FIXED
+                })
             })
             .then(response => response.json())
             .then(data => {
