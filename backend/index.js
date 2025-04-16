@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 
 dotenv.config();
 
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
